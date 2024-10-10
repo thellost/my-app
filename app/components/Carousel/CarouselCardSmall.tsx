@@ -9,7 +9,7 @@ export const CarouselCardSmall = ({bodytext="default body", title="default title
     return (
         
 
-<div className=" bg-baseColor rounded-xl max-w-96 overflow-hidden shadow-lg w-96">
+<div className=" bg-baseColor rounded-xl max-w-96 overflow-hidden shadow-lg">
   <Image className="object-fill h-80 w-96" src={url} alt="Sunset in the mountains" width={1000} height={1000}></Image>
   <div className="px-6 py-4">
     <div className="text-white font-bold text-xl mb-2">{title}</div>
