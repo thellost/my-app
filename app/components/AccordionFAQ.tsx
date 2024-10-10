@@ -10,7 +10,7 @@ export const AccordionFAQ = ({ question, answer }: questionProps) => {
     <div className="">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className={`flex items-center justify-between w-full sm:p-6 bg-white transition-all duration-300 ease-in-out ${
+        className={`flex items-center justify-between w-full min-h-12 px-5 sm:py-6 sm:px-5 bg-white transition-all duration-300 ease-in-out ${
           accordionOpen
             ? "rounded-t-xl"
             : "rounded-xl"
