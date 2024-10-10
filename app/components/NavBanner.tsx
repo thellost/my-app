@@ -1,9 +1,5 @@
 
-type BannerProps = {
-    title?: string
-}
-
-export const NavBanner = ({title = "My Default Subheading"}: BannerProps) => {
+export const NavBanner = () => {
 
     return (
     <a></a>)

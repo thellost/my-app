@@ -1,10 +1,10 @@
 
 
-import React, { Children, ReactNode } from "react";
+import React from "react";
 import { CarouselCardProps } from "./CarouselCustom";
 
 
-export const CarouselCardBig = ({bodytext="default body", title="default title", url="[url('../public/blackjack.png')]"}: CarouselCardProps) => {
+export const CarouselCardBig = ({bodytext="default body", title="default title"}: CarouselCardProps) => {
 
     return (
         <div

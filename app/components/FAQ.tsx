@@ -1,11 +1,7 @@
-import { title } from "process";
-import React, { Children, ReactNode } from "react";
-import { MouseEvent } from "react";
+
+import React from "react";
 import {AccordionFAQ} from "./AccordionFAQ";
-interface ButtonProps {
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  // Other props...
-}
+
 export type questionProps = {
     question: string,
     answer: string,
@@ -15,23 +11,6 @@ export type FAQProps = {
 }
 
 export const FAQ = ({questions}: FAQProps) => {
-    const handleClick = (id:string|null) => {
-        
-        
-        var answer = document.getElementById('answer' + id);
-        var arrow = document.getElementById('arrow' + id);
-        console.log(answer);
-        if(answer !== null && arrow !== null){
-            if (answer.style.display === 'none' || answer.style.display === '') {
-                answer.style.display = 'block';
-                arrow.style.transform = 'rotate(-180deg)';
-            } else {
-                answer.style.display = 'none';
-                arrow.style.transform = 'rotate(0deg)';
-            }
-        }
-        
-    };
 
     function cardRender({answer, question}: questionProps){
         return  <AccordionFAQ question={question} answer={answer}></AccordionFAQ>
@@ -39,7 +18,7 @@ export const FAQ = ({questions}: FAQProps) => {
     
     }
 
-    var cardsRender= () =>{
+    const cardsRender= () =>{
         return questions.map(question => {
             return cardRender(question)
           });

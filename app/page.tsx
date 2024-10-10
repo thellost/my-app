@@ -5,9 +5,9 @@ import LiveHeading from "./components/LiveHeading";
 import TitleJumbotron from "./components/TitleJumbotron";
 import CarouselCustom from "./components/Carousel/CarouselCustom";
 import { CarouselCardProps} from "./components/Carousel/CarouselCustom";
-import { FAQ, FAQProps, questionProps } from "./components/FAQ";
+import { FAQ, questionProps } from "./components/FAQ";
 import { FooterCustom } from "./components/FooterCustom";
-let loremIpsum: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut atque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
+const loremIpsum: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut atque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
 
 const data_placeholder_carousel_big: CarouselCardProps[] = [
   {
@@ -137,7 +137,7 @@ export default function Home() {
     <div>
     <LiveHeading></LiveHeading>
     <Heading title={"Mzeca Casino."}></Heading>
-    <Banner title={"Welcome"}></Banner>
+    <Banner></Banner>
     <TitleJumbotron></TitleJumbotron>
     <CarouselCustom
         title="Featured this month!"

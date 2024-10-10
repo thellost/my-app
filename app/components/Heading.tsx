@@ -20,7 +20,7 @@ const Heading = ({title}: HeadingProps): ReactElement => {
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                   <a href="#" className="rounded-md px-3 py-2 text-sm font-bold text-baseFontColor hover:underline" aria-current="page">Sign In</a>
-                  <a href="#" className="drop-shadow-lg rounded-md bg-orangeAttention px-6 py-2 text-sm font-bold drop-shadow-xl text-baseFontColor  hover:bg-white hover:text-orangeAttention">Register</a>
+                  <a href="#" className="rounded-md bg-orangeAttention px-6 py-2 text-sm font-bold drop-shadow-xl text-baseFontColor  hover:bg-white hover:text-orangeAttention">Register</a>
                 </div>
               </div>
             </div>

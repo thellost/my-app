@@ -1,7 +1,8 @@
 
 
-import React, { Children, ReactNode } from "react";
+import React from "react";
 import { CarouselCardProps } from "./CarouselCustom";
+import Image from "next/image";
 
 export const CarouselCardSmall = ({bodytext="default body", title="default title", url="/SlotGo.jpg", playing="218"}: CarouselCardProps) => {
 
@@ -9,7 +10,7 @@ export const CarouselCardSmall = ({bodytext="default body", title="default title
         
 
 <div className=" bg-baseColor rounded-xl max-w-96 overflow-hidden shadow-lg w-96">
-  <img className="object-fill h-80 w-96" src={url} alt="Sunset in the mountains"></img>
+  <Image className="object-fill h-80 w-96" src={url} alt="Sunset in the mountains" width={1000} height={1000}></Image>
   <div className="px-6 py-4">
     <div className="text-white font-bold text-xl mb-2">{title}</div>
     <p className="text-gray-300 text-base">

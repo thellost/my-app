@@ -1,5 +1,4 @@
-import { title } from "process";
-import React, { Children, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 type SectionProps = {
     title?: string,
