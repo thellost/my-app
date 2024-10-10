@@ -161,7 +161,7 @@ export default function Home() {
         infinite={true}
         type="SmallCard"></CarouselCustom>
     <FAQ questions={data_placeholder_faq}></FAQ>
-    <FooterCustom bgColor="baseColor" textColor="white"></FooterCustom>
+    <FooterCustom bgColor="baseColor" titleColor="white"></FooterCustom>
 
     
     </div>
