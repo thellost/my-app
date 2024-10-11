@@ -283,16 +283,11 @@ export const FooterCustom = ({
 
                 <div className="mt-12 border-t border-gray-100 pt-6">
 
-                    <div className="flex">
-                        <div className="flex-1">
-                            asdasd
-                        </div>
-                        <div className="flex-1">
-                            asdasd
-                        </div>
-                        <div className="flex-1">
-                            asdasd
-                        </div>
+                    <div className="grid grid-cols-6 grid-flow-cols-dense">
+                        <Image alt="" width={300} height={300} src="/BeGambleAware.png" className="col-start-3">
+                        </Image>
+                        <Image alt="" width={300} height={300} src="/MaltaGamingAuthority.png" className="flex">
+                        </Image>
                     </div>
 
                 </div>
