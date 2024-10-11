@@ -1,3 +1,4 @@
+'use client'
 import {ReactElement} from "react";
 type HeadingProps = {
     title: string
@@ -77,69 +78,75 @@ const Heading = ({title} : HeadingProps) : ReactElement => {
             </nav>
             <div
                 id="MegaMenu"
-                className={`bg-baseColor transation-all duration-500 ease-in-out origin-top grid grid-cols-2 grid-flow-row justify-center items-center h-fit
-                ${MenuOpen
-                      ? "grid-rows-[1fr] opacity-100 max-h-screen"
-                      : "grid-rows-[0fr] opacity-0 max-h-0"
-                  }
-                `}>
+                className={`bg-baseColor overflow-hidden transation-all duration-500 ease-in-out origin-top grid grid-cols-2 grid-flow-row justify-center items-center h-fit ${MenuOpen
+                ? "grid-rows-[1fr] opacity-100 max-h-screen"
+                : "grid-rows-[0fr] opacity-0 max-h-0"} `}>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Live Play.
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Slots
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Blackjack
                     </div>
                 </div>
                 <div
                     className="overflow-hidden  flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Baccarat
                     </div>
                 </div>
                 <div
                     className="overflow-hidden  flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Account
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Settings
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Affiliate
                     </div>
                 </div>
 
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Support
                     </div>
                 </div>
 
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
-                    <div className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                    <div
+                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
                         Responsible Gaming
                     </div>
                 </div>
-               
+
             </div>
         </div>
     )

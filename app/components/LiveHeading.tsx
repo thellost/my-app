@@ -1,4 +1,6 @@
+'use client' //#for carousel
 import React, {useState} from "react";
+import Image from "next/image";
 
 const LiveHeading = () => {
 
@@ -7,7 +9,7 @@ const LiveHeading = () => {
 
     return (
         <div
-            className="px-6 pt-2  flex bg-baseWashedColor sticky top-0 z-50 transition-all">
+            className="px-6 py-2  flex bg-baseWashedColor sticky top-0 z-50 transition-all">
             <div className="flex-1 grid-row mr-2 basis-[96.2857143%] overflow-hidden">
                 <div
                     className={`flex basis-[96.2857143%] px-4 py-1 border-solid border-[0.5px] border-baseOutline transition-all duration-300 ease-in-out ${liveNavOpen
@@ -30,15 +32,17 @@ const LiveHeading = () => {
                         <div className="flex-1 flex grow flex-row relative bg-baseCardGray rounded-lg shadow ">
                             <div
                                 className="group w-14 h-14 bg-orangeAttention absolute m-auto left-0 right-32 bottom-4 min-w-0.5 min-h-0.5 grid place-items-center rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="pt-1.5 pl-1 w- " viewBox="0 0 100 125">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="pt-1.5 pl-1 w-10 " viewBox="0 0 100 125">
                                 <path d="M78.627 47.203 24.873 16.167c-1.082-.625-2.227-.625-3.311 0-1.084.626-1.562 1.781-1.562 3.032V81.27c0 1.25.478 2.406 1.561 3.031.542.313 1.051.469 1.656.469.604 0 1.161-.156 1.703-.469l53.731-31.035a3.489 3.489 0 0 0 1.738-3.031 3.513 3.513 0 0 0-1.762-3.032z"/>
                               </svg>
 
                             </div>
-                            <img
+                            <Image
                                 className="flex-1 static object-cover w-48 h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                                 src="/blackjack.png"
-                                alt=""></img>
+                                width={1200}
+                                height={700}
+                                alt=""></Image>
                             <div className="flex-1 flex flex-col justify-end p-4 leading-normal">
                                 <h5
                                     className="mb-2 text-2xl font-bold tracking-tight text-orangeAttention animate-pulse">Live Now:</h5>

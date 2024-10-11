@@ -1,8 +1,11 @@
+'use client' //#for carousel
 import React, { useState } from "react";
 export type questionProps = {
   question: string,
   answer: string,
 }
+
+
 export const AccordionFAQ = ({ question, answer }: questionProps) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
@@ -17,7 +20,6 @@ export const AccordionFAQ = ({ question, answer }: questionProps) => {
         }`}
       >
         <span className="flex text-lg font-semibold text-black">{question}</span>
-        {/* {accordionOpen ? <span>-</span> : <span>+</span>} */}
         <svg id={"arrow"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
             className={`w-6 h-6 text-gray-400 transform origin-center transition duration-200 ease-out ${
               accordionOpen && "!rotate-180"

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -74,7 +75,7 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
   }
   
     return (
-        <div className={`bg-${bgColor} row-auto h-auto overflow-visible pb-20 pl-20 pt-20 z-0`}>
+        <div className={`bg-${bgColor} row-auto h-auto overflow-visible pb-20 pl-10 pr-10 pt-20 z-0 md:pl-20 md:pr-10`}>
           <h2 className={`mb-4 text-2xl text-inter font-extrabold tracking-tight leading-none text-${titleColor} md:text-3xl lg:text-4xl dark:text-${titleColor}`}>{title}</h2>
           <p className={`mb-8 text-lg font-normal text-${bodytextColor} lg:text-xl dark:text-${bodytextColor}`}>{bodytext}</p>
             <Carousel
@@ -84,7 +85,6 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
             responsive={responsive}
             ssr={false} // means to render carousel on server-side.
             infinite={infinite}
-            removeArrowOnDeviceType={["tablet", "mobile"]}
             autoPlaySpeed={1000}
             keyBoardControl={true}
             transitionDuration={500}
