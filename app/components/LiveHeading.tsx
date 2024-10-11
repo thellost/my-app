@@ -8,10 +8,10 @@ const LiveHeading = (): ReactElement => {
             <div className="text-orangeAttention">
              
             </div>
-            <div className="animate-pulse text-sm text-orangeAttention">
+            <div className="animate-pulse text-sm text-orangeAttention truncate">
             Live Now : 
             </div>
-            <div className="text-sm px-5 text-baseGrayText">
+            <div className="text-sm px-5 text-baseGrayText truncate">
             Live Blackjack and Casino 
             </div>
           </div>
@@ -22,6 +22,7 @@ const LiveHeading = (): ReactElement => {
             </svg>
             
           </div>
+          
       </div>
     )
 }
