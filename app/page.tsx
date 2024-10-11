@@ -34,7 +34,7 @@ const data_placeholder_carousel_small: CarouselCardProps[] = [
   {
     title: "Gate of Olympus",
     bodytext: loremIpsum,
-    url: "/SlotGO.jpg",
+    url: "/SlotGo.jpg",
     playing:"258"
   },
   {
