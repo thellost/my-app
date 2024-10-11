@@ -135,8 +135,11 @@ const data_placeholder_faq: questionProps[] = [
 export default function Home() {
   return (
     <div>
-    <LiveHeading></LiveHeading>
-    <Heading title={"Mzeca Casino."}></Heading>
+      <div className="sticky top-0 z-50">
+      <LiveHeading></LiveHeading>
+      <Heading title={"Mzeca Casino."}></Heading>
+      </div>
+    
     <Banner></Banner>
     <TitleJumbotron></TitleJumbotron>
     <CarouselCustom

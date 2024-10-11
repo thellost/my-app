@@ -18,7 +18,8 @@ const config: Config = {
         baseWashedColor: '#1B1B1B',
         baseOutline: '#5B5B5B',
         baseGrayText: '#A1A1AA',
-        baseGraySubheading :'#C4C4C4'
+        baseGraySubheading :'#C4C4C4',
+        baseCardGray:'#272727'
       },
     },
   },

@@ -25,13 +25,13 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 2,
+      items: 3,
       slidesToSlide: 1,// optional, default to 1.,
       partialVisibilityGutter: 40
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 1,
+      items: 2,
       slidesToSlide: 1, // optional, default to 1.
       partialVisibilityGutter: 40
     },
@@ -67,6 +67,8 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
           return <CarouselCardBig key=" " title={data.title} bodytext={data.bodytext} url={data.url}></CarouselCardBig>
         });
       };
+      
+      responsive.desktop.items = 2;
       break;
 
   }
