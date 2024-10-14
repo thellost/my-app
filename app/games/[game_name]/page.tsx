@@ -132,6 +132,13 @@ const data_placeholder_faq: questionProps[] = [
     }
   ]
 
+const url_christmas: string = "https://evoplay.nexusggreu.com/game/fullstate/html5/evoplay/?project=5831&gameCode=ChristmasReachBonusBuy&demo=0&wid=1&s=3c83197c048e8b71bee83d11232de34a&__cf_chl_rt_tk=rRC50AbnzeeLrRGeasze_zzqfpePLqtqsowoqd4s_a0-1727664874-0.0.1.1-5951";
+const url_wildframe: string = "https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=wildframes&lang=en_GB&practice=1&channel=desktop&demo=2"
+const url_release_the_kraken:string = "https://demogamesfree.pragmaticplay.net/gs2c/html5Game.do?extGame=1&symbol=vswayskrakenmw&gname=Release%20the%20Kraken%20Megaways&jurisdictionID=99&lobbyUrl=https%3A%2F%2Fclienthub.pragmaticplay.com%2Fslots%2Fgame-library%2F&mgckey=stylename@generic~SESSION@7a191c6e-5616-47d1-a599-115cf2c6fd43"
+const url_gof: string = "https://demogamesfree.pragmaticplay.net/gs2c/html5Game.do?extGame=1&symbol=vs20olympgate&gname=Gates%20of%20Olympus&jurisdictionID=99&lobbyUrl=https%3A%2F%2Fwww.pragmaticplay.com&mgckey=stylename@generic~SESSION@9138d883-8413-47c5-b0c1-93361e709569";
+const url_sugar_rush: string = "https://demogamesfree.pragmaticplay.net/gs2c/html5Game.do?extGame=1&symbol=vs20sugarrush&gname=Sugar%20Rush&jurisdictionID=99&lobbyUrl=https%3A%2F%2Fclienthub.pragmaticplay.com%2Fslots%2Fgame-library%2F&mgckey=stylename@generic~SESSION@c2932d5c-f78d-492a-9ec3-b246f2fe0078";
+
+
 export default function Games({params, searchParams}:{
   params: {game_name:string},
   searchParams: {game_name:string}
@@ -144,8 +151,10 @@ export default function Games({params, searchParams}:{
       <Heading title={params.game_name}></Heading>
       </div>
 
-      <div className="h-screen bg-baseBackIcon">
-
+      <div className=" bg-baseBackIcon grid place-items-center h-screen">
+        <div className="px-5 py-5 h-full w-full">
+        <iframe width="100%" height="100%" src={url_wildframe}></iframe>
+        </div>
       </div>
     
     
