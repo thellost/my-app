@@ -28,8 +28,8 @@ const LiveHeading = () => {
                     ? "grid-rows-[1fr] opacity-100 max-h-screen"
                     : "grid-rows-[0fr] opacity-0 max-h-0"} `}>
 
-                    <div className="text-white flex col-span-4 overflow-hidden py-3 px-2">
-                        <div className="flex-1 flex grow flex-row relative bg-baseCardGray rounded-lg shadow ">
+                    <div className="text-white flex col-span-5 sm:col-span-4 overflow-hidden py-3 px-2">
+                        <div className="flex-1 flex grow flex-row relative bg-baseCardGray rounded-lg shadow overflow-hidden ">
                             <div
                                 className="group w-14 h-14 bg-orangeAttention absolute m-auto left-0 right-32 bottom-4 min-w-0.5 min-h-0.5 grid place-items-center rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="pt-1.5 pl-1 w-10 " viewBox="0 0 100 125">
@@ -52,14 +52,14 @@ const LiveHeading = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="text-white col-span-1 overflow-hidden py-3 px-2">
+                    <div className="text-white col-span-1 hidden sm:block overflow-hidden py-3 px-2">
                         <div
-                            className="flex-1 h-full flex grow flex-row bg-baseCardGray rounded-lg shadow">
+                            className="flex-1 h-full flex grow flex-row bg-baseCardGray rounded-lg shadow overflow-hidden">
                             <div className="flex-1 flex flex-col justify-between p-4 leading-normal">
                                 <h5
                                     className="mb-2 text-2xl font-bold tracking-tight text-orangeAttention animate-pulse">Live Now:</h5>
                                
-                                <button className="border  hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded-full">
+                                <button className="border truncate hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded-full">
                                   More Live Game here !
                                 </button>
                             </div>

@@ -1,12 +1,12 @@
 
-import Heading from "./components/Heading";
-import { Banner } from "./components/Banner";
-import LiveHeading from "./components/LiveHeading";
-import TitleJumbotron from "./components/TitleJumbotron";
-import CarouselCustom from "./components/Carousel/CarouselCustom";
-import { CarouselCardProps} from "./components/Carousel/CarouselCustom";
-import { FAQ, questionProps } from "./components/FAQ";
-import { FooterCustom } from "./components/FooterCustom";
+import Heading from "../components/Heading";
+import { Banner } from "../components/Banner";
+import LiveHeading from "../components/LiveHeading";
+import TitleJumbotron from "../components/TitleJumbotron";
+import CarouselCustom from "../components/Carousel/CarouselCustom";
+import { CarouselCardProps} from "../components/Carousel/CarouselCustom";
+import { FAQ, questionProps } from "../components/FAQ";
+import { FooterCustom } from "../components/FooterCustom";
 const loremIpsum: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut atque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
 
 const data_placeholder_carousel_big: CarouselCardProps[] = [

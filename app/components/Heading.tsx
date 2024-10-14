@@ -15,10 +15,10 @@ const Heading = ({title} : HeadingProps) : ReactElement => {
     return (
         <div className="bg-baseColor sticky top-10 z-50 grid-row">
             <nav className="z-50">
-                <div className="mx-10 px-2 sm:px-6 lg:px-8">
+                <div className="mx-2 px-2 md:mx-10 sm:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
                         <div
-                            className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                            className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-start">
                             <div className="flex flex-shrink-0 items-center">
                                 <h1 className="px-1 font-bold text-2xl text-baseFontColor   ">{title}</h1>
                                 <Image className="h-8 w-auto" src={logo} alt="Your Company"></Image>
@@ -84,49 +84,49 @@ const Heading = ({title} : HeadingProps) : ReactElement => {
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Live Play.
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Slots
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Blackjack
                     </div>
                 </div>
                 <div
                     className="overflow-hidden  flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Baccarat
                     </div>
                 </div>
                 <div
                     className="overflow-hidden  flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white  text-xl md:text-4xl font-semibold cursor-pointer">
                         Account
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white  text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Settings
                     </div>
                 </div>
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white  text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Affiliate
                     </div>
                 </div>
@@ -134,7 +134,7 @@ const Heading = ({title} : HeadingProps) : ReactElement => {
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Support
                     </div>
                 </div>
@@ -142,7 +142,7 @@ const Heading = ({title} : HeadingProps) : ReactElement => {
                 <div
                     className="overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit border border-baseOutline/40">
                     <div
-                        className="overflow-hidden text-white  text-4xl font-semibold cursor-pointer">
+                        className="overflow-hidden text-white text-center text-xl md:text-4xl font-semibold cursor-pointer">
                         Responsible Gaming
                     </div>
                 </div>

@@ -1,12 +1,12 @@
 
-import Heading from "./components/Heading";
-import { Banner } from "./components/Banner";
-import LiveHeading from "./components/LiveHeading";
-import TitleJumbotron from "./components/TitleJumbotron";
-import CarouselCustom from "./components/Carousel/CarouselCustom";
-import { CarouselCardProps} from "./components/Carousel/CarouselCustom";
-import { FAQ, questionProps } from "./components/FAQ";
-import { FooterCustom } from "./components/FooterCustom";
+import Heading from "../../components/Heading";
+import { Banner } from "../../components/Banner";
+import LiveHeading from "../../components/LiveHeading";
+import TitleJumbotron from "../../components/TitleJumbotron";
+import CarouselCustom from "../../components/Carousel/CarouselCustom";
+import { CarouselCardProps} from "../../components/Carousel/CarouselCustom";
+import { FAQ, questionProps } from "../../components/FAQ";
+import { FooterCustom } from "../../components/FooterCustom";
 const loremIpsum: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut atque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
 
 const data_placeholder_carousel_big: CarouselCardProps[] = [
@@ -132,38 +132,23 @@ const data_placeholder_faq: questionProps[] = [
     }
   ]
 
-export default function Home() {
+export default function Games({params, searchParams}:{
+  params: {game_name:string},
+  searchParams: {game_name:string}
+
+}) {
   return (
     <div>
       <div className="sticky top-0 z-50">
       <LiveHeading></LiveHeading>
-      <Heading title={"Mzeca Casino."}></Heading>
+      <Heading title={params.game_name}></Heading>
+      </div>
+
+      <div className="h-screen bg-baseBackIcon">
+
       </div>
     
-    <Banner></Banner>
-    <TitleJumbotron></TitleJumbotron>
-    <CarouselCustom
-        title="Featured this month!"
-        bodytext="Popular & Exciting Games !"
-        bgColor="baseColor"
-        data={data_placeholder_carousel_big}
-        type="BigCard"></CarouselCustom>
-    <CarouselCustom
-        title="Slots"
-        bodytext="Popular and High RTP Slots !"
-        bgColor="white"
-        infinite={true}
-        data={data_placeholder_carousel_small} titleColor={"black"} bodytextColor={"black"}
-
-        type="SmallCard"></CarouselCustom>
-    <CarouselCustom
-        title="Tables Game"
-        bodytext="Classic Games"
-        bgColor="baseColor"
-        data={data_placeholder_carousel_small_2}
-        infinite={true}
-        type="SmallCard"></CarouselCustom>
-    <FAQ questions={data_placeholder_faq}></FAQ>
+    
     <FooterCustom bgColor="baseColor" titleColor="white"></FooterCustom>
 
     
