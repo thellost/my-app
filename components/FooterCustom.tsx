@@ -281,17 +281,17 @@ export const FooterCustom = ({
                     </div>
                 </div>
 
-                <div className="mt-12 border-t border-gray-100 pt-6">
+                <div className="mt-12 border-t border-gray-100">
 
                     <div className="grid grid-cols-2 items-center justify-center grid-flow-cols-dense">
-                        <div className="flex justify-center items-center"><Image alt="" width={300} height={300} src="/BeGambleAware.png" className="">
+                        <div className="flex justify-center items-center"><Image alt="" width={300} height={100} src="/BeGambleAware.png" className="">
                         </Image></div>
-                        <div className="flex justify-center items-center"><Image alt="" width={300} height={300} src="/MaltaGamingAuthority.png" className="flex">
+                        <div className="flex justify-center items-center"><Image alt="" width={300} height={100} src="/MaltaGamingAuthority.png" className="flex">
                         </Image></div>
                     </div>
 
                 </div>
-                <div className="mt-12 border-t border-gray-100 pt-6">
+                <div className="border-t border-gray-100">
                     <div className="text-center sm:flex sm:justify-between sm:text-left">
                         <p className="text-sm text-gray-500">
                             <span className="block sm:inline">All rights reserved.</span>

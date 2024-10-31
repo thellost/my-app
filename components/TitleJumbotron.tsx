@@ -1,4 +1,4 @@
-import logo from '../../public/figma-svgrepo-com.svg';
+import logo from '@/public/figma-svgrepo-com.svg';
 import Image from 'next/image';
 import { ReactElement } from "react";
 

@@ -18,7 +18,7 @@ type CarouselProps = {
 export type CarouselCardProps = {
   title?: string | '',
   bodytext?:string | '',
-  url?:string,
+  image_url?:string,
   playing?:string
 } 
 
@@ -48,7 +48,7 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
     case 'BigCard':
       renderCards = () => {
         return data.map(data => {
-          return <CarouselCardBig key=" " title={data.title} bodytext={data.bodytext} url={data.url}></CarouselCardBig>
+          return <CarouselCardBig key=" " title={data.title} bodytext={data.bodytext} image_url={data.image_url}></CarouselCardBig>
         });
       };
       responsive.desktop.items = 2;
@@ -56,7 +56,7 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
     case 'SmallCard':
       renderCards = () => {
         return data.map(data => {
-          return <CarouselCardSmall key=" " title={data.title} bodytext={data.bodytext} url={data.url} playing={data.playing}></CarouselCardSmall>
+          return <CarouselCardSmall key=" " title={data.title} bodytext={data.bodytext} image_url={data.image_url} playing={data.playing}></CarouselCardSmall>
         });
       };
       responsive.desktop.items = 3;
@@ -65,7 +65,7 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
     default:
       renderCards = () => {
         return data.map(data => {
-          return <CarouselCardBig key=" " title={data.title} bodytext={data.bodytext} url={data.url}></CarouselCardBig>
+          return <CarouselCardBig key=" " title={data.title} bodytext={data.bodytext} image_url={data.image_url}></CarouselCardBig>
         });
       };
       

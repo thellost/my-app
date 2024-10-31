@@ -1,0 +1,1 @@
+ALTER TABLE "customers" ADD COLUMN "credits" double precision DEFAULT 0;
