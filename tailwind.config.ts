@@ -1,3 +1,4 @@
+import { Inter } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -21,6 +22,9 @@ const config: Config = {
         baseGraySubheading :'#C4C4C4',
         baseCardGray:'#272727'
       },
+      fontFamily: {
+        Inter: ['Inter', 'Inter'],
+       }
     },
   },
   plugins: [],

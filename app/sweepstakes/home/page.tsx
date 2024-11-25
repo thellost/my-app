@@ -1,7 +1,6 @@
-import Heading from "@/components/Heading";
-import {Banner} from "@/components/Banner";
-import LiveHeading from "@/components/LiveHeading";
-import TitleJumbotron from "@/components/TitleJumbotron";
+import Heading from "@/components/Sweepstake/Heading";
+import {Banner} from "@/components/Sweepstake/Banner";
+import TitleJumbotron from "@/components/Sweepstake/TitleJumbotron";
 import CarouselCustom from "@/components/Carousel/CarouselCustom";
 import {CarouselCardProps} from "@/components/Carousel/CarouselCustom";
 import {FAQ, questionProps} from "@/components/FAQ";
@@ -122,27 +121,13 @@ const data_placeholder_faq : questionProps[] = [
 
 export default async function Home() {
 
-    const {getAccessToken} = getKindeServerSession();
-    const {isAuthenticated} = getKindeServerSession();
-    const accessToken = await getAccessToken();
-    let email = null,firstname=null;
-    if (await isAuthenticated()){
-      console.log(accessToken);
-      const db_response = await db.select({
-        email: customerTable.email,
-        firstname: customerTable.firstname
-      }).from(customerTable).where(eq(customerTable.email, 'aldy10ball@gmail.com'));
-      email = db_response[0].email;
-      firstname = db_response[0].firstname;
-      
-    }
+
    
 
     return (
         <div>
             <div className="sticky top-0 z-50">
-                <LiveHeading></LiveHeading>
-                <Heading title={"Mzeca Casino."} isAuthenticated={await isAuthenticated()} email={email} name={firstname} displayMoney={false}></Heading>
+                <Heading title={"SweepstakePlatform"} isAuthenticated={false} email={null} name={null}></Heading>
             </div>
 
             <Banner></Banner>

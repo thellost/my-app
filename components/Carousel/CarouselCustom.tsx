@@ -92,6 +92,7 @@ const CarouselCustom = ({bodytext="Popular & Exciting Games !", title="Featured 
             >
             {renderCards()}
             </Carousel>
+            
             </div>
     )
 }
