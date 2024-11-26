@@ -8,7 +8,7 @@ export default function Games() {
   return (
     <div>
       <div className="sticky top-0 z-50">
-      <Heading title={"Mzeca Casino."} isAuthenticated={null} email={null} name={null}></Heading>
+      <Heading title={"Mzeca Casino."} isAuthenticated={null} email={null} name={null} displayMoney={true}></Heading>
       </div>
 
       <div className=" bg-baseBackIcon grid place-items-center h-screen">

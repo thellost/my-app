@@ -42,7 +42,7 @@ const Heading = ({
                     <div className="relative flex h-16 items-center justify-between">
                         <div
                             className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-start">
-                            <a href="/">
+                            <a href="#">
                                 <div className="flex flex-shrink-0 items-center">
                                     <h1 className="px-1 font-bold text-2xl text-baseFontColor  hidden md:flex">{title}</h1>
                                     <Image className="h-8 w-auto" src={logo} alt="Your Company"></Image>

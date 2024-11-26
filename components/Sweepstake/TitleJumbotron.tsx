@@ -1,6 +1,5 @@
 
 import {ReactElement} from "react";
-import Carousel from "react-multi-carousel";
 import SimpleCarousel from "./simpleCarousel";
 const TitleJumbotron = () : ReactElement => {
 
@@ -38,7 +37,7 @@ const TitleJumbotron = () : ReactElement => {
                         <a
                             href="#"
                             className="inline-flex justify-center items-center font-bold font-Inter text-md text-center px-10 py-2 mr-2 mb-2 text-white underline">
-                            How It's Works
+                            How It&apos;s Works
                         </a>
                     </div>
                 </div>

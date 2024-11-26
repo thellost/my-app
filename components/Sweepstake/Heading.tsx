@@ -9,25 +9,13 @@ type HeadingProps = {
 import Image from "next/image";
 import logo from '@/public/figma-svgrepo-com-Orange.svg';
 import React, {useState} from "react";
-import {LoginLink, RegisterLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
-
 const Heading = ({
-    title,
-    isAuthenticated = false,
-    email = null,
-    name = null
+    title
 } : HeadingProps) : ReactElement => {
 
     const [MenuOpen,
         setMenuOpen] = useState < boolean > (false);
-    const [ProfileOpen,
-        setProfileOpen] = useState < boolean > (false);
 
-    const buttonClass = "overflow-hidden flex justify-center items-center h-20 md:h-20 sm:h-fit  cursor-p" +
-            "ointer border group transition-all duration-200 hover:bg-orangeAttention border-" +
-            "baseOutline/40";
-    const textClass = "overflow-hidden text-white text-center text-xl md:text-4xl font-semibold  transi" +
-            "tion-all duration-200 group-hover:text-black";
     const profileTextClass = "font-Inter block px-4 py-3 text-sm text-gray-300  capitalize transition-colors d" +
             "uration-200 transform dark:text-gray-300 hover:bg-baseWashedColor dark:hover:bg-gray-70" +
             "0 dark:hover:text-white";
@@ -40,7 +28,7 @@ const Heading = ({
                     <div className="relative flex h-20 items-center justify-between">
                         <div
                             className="flex flex-0 items-center justify-between sm:items-stretch sm:justify-start">
-                            <a href="/">
+                            <a href="#">
                                 <div className="flex flex-shrink-0 items-center basis-1/3">
                                     <Image className="h-8 w-auto" src={logo} alt="Your Company"></Image>
                                     <h1

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React, {useState} from 'react';
+import React from 'react';
 function SimpleCarousel() {
 
     const responsive = {
@@ -38,6 +38,7 @@ function SimpleCarousel() {
         const image = ["/hellcat.png", "/anventador.png", "/corvette.png"]
         return image.map(data => {
             return <Image
+            key={" "}
             className="object-fill"
             src={data}
             alt="Sunset in the mountains"

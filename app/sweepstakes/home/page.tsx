@@ -1,15 +1,10 @@
 import Heading from "@/components/Sweepstake/Heading";
-import {Banner} from "@/components/Sweepstake/Banner";
 import TitleJumbotron from "@/components/Sweepstake/TitleJumbotron";
 import CarouselCustom from "@/components/Carousel/CarouselCustom";
 import { GridCard } from "@/components/Sweepstake/GridCard";
 import {CarouselCardProps} from "@/components/Carousel/CarouselCustom";
 import {FAQ, questionProps} from "@/components/FAQ";
 import {FooterCustom} from "@/components/FooterCustom";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { customerTable } from "@/db/schema";
-import { eq } from "drizzle-orm";
-import { db } from "@/db";
 const loremIpsum : string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut a' +
         'tque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
 
@@ -130,8 +125,6 @@ export default async function Home() {
             <div className="sticky top-0 z-50">
                 <Heading title={"SweepstakePlatform"} isAuthenticated={false} email={null} name={null}></Heading>
             </div>
-
-            <Banner></Banner>
             <TitleJumbotron></TitleJumbotron>
             <GridCard bgColor="white" titleColor="baseColor"></GridCard>
             <CarouselCustom
