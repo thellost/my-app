@@ -29,11 +29,11 @@ const Heading = ({
     const textClass = "overflow-hidden text-white text-center text-xl md:text-4xl font-semibold  transi" +
             "tion-all duration-200 group-hover:text-black";
     const profileTextClass = "font-Inter block px-4 py-3 text-sm text-gray-300  capitalize transition-colors d" +
-            "uration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-70" +
+            "uration-200 transform dark:text-gray-300 hover:bg-baseWashedColor dark:hover:bg-gray-70" +
             "0 dark:hover:text-white";
 
     return (
-        <div className="bg-baseColor sticky top-10 z-50 grid-row">
+        <div className="bg-baseColor sticky top-10 z-50  grid-row">
             <nav className="z-50">
                 <div className="mx-2 px-2 md:mx-6 sm:px-6 lg:px-8">
 

@@ -2,6 +2,7 @@ import Heading from "@/components/Sweepstake/Heading";
 import {Banner} from "@/components/Sweepstake/Banner";
 import TitleJumbotron from "@/components/Sweepstake/TitleJumbotron";
 import CarouselCustom from "@/components/Carousel/CarouselCustom";
+import { GridCard } from "@/components/Sweepstake/GridCard";
 import {CarouselCardProps} from "@/components/Carousel/CarouselCustom";
 import {FAQ, questionProps} from "@/components/FAQ";
 import {FooterCustom} from "@/components/FooterCustom";
@@ -132,6 +133,7 @@ export default async function Home() {
 
             <Banner></Banner>
             <TitleJumbotron></TitleJumbotron>
+            <GridCard data={"null"} bgColor="white" titleColor="baseColor"></GridCard>
             <CarouselCustom
                 title="Featured this month!"
                 bodytext="Popular & Exciting Games !"

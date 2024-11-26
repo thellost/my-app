@@ -45,7 +45,7 @@ const TitleJumbotron = () : ReactElement => {
 
             </div>
             <div className="row-auto overflow-visible pb-20 pl-10 pr-10 pt-20 z-0 md:pl-20 md:pr-10 lg:grid-rows gap-8 lg:gap-16">
-                <div className="grid grid-cols-2 w-5/12 justify-center  items-center">
+                <div className="grid grid-cols-2 w-5/12 justify-center items-center">
 
                     
                 <div className="font-Inter text-white text-6xl items-center"> 1,750+</div>

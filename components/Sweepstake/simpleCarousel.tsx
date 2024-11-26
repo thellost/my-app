@@ -49,7 +49,7 @@ function SimpleCarousel() {
     return (
 <Carousel swipeable={false}
             draggable={false}
-            arrows={false}
+            arrows={true}
             responsive={responsive}
             ssr={false} // means to render carousel on server-side.
             infinite={true}

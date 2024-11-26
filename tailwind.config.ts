@@ -20,7 +20,9 @@ const config: Config = {
         baseOutline: '#5B5B5B',
         baseGrayText: '#A1A1AA',
         baseGraySubheading :'#C4C4C4',
-        baseCardGray:'#272727'
+        baseCardGray:'#272727',
+        baseBlueText:'#554AFF',
+        baseLightBlue:'#E9F2FF'
       },
       fontFamily: {
         Inter: ['Inter', 'Inter'],
