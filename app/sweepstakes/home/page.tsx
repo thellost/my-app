@@ -133,7 +133,7 @@ export default async function Home() {
 
             <Banner></Banner>
             <TitleJumbotron></TitleJumbotron>
-            <GridCard data={"null"} bgColor="white" titleColor="baseColor"></GridCard>
+            <GridCard bgColor="white" titleColor="baseColor"></GridCard>
             <CarouselCustom
                 title="Featured this month!"
                 bodytext="Popular & Exciting Games !"
