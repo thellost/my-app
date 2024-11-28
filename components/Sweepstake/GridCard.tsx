@@ -53,8 +53,9 @@ export const GridCard = ({
     let renderCards;
     if (data != null) {
         renderCards = () => {
+            let nums = 0;
             return data.map(data => {
-                return <GridCardCar key={" "} title={data.title} price={data.price} image={data.image} days={data.days} sold={data.sold}></GridCardCar>
+                return <GridCardCar key={nums++} title={data.title} price={data.price} image={data.image} days={data.days} sold={data.sold}></GridCardCar>
             });
         };
     } else {

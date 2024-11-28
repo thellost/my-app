@@ -4,6 +4,7 @@ import CarouselCustom from "@/components/Carousel/CarouselCustom";
 import { GridCard } from "@/components/Sweepstake/GridCard";
 import {CarouselCardProps} from "@/components/Carousel/CarouselCustom";
 import {FAQ, questionProps} from "@/components/FAQ";
+import {HalfBanner} from "@/components/Sweepstake/HalfBanner";
 import {FooterCustom} from "@/components/FooterCustom";
 const loremIpsum : string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut a' +
         'tque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
@@ -127,6 +128,8 @@ export default async function Home() {
             </div>
             <TitleJumbotron></TitleJumbotron>
             <GridCard bgColor="white" titleColor="baseColor"></GridCard>
+            <HalfBanner></HalfBanner>
+            <GridCard bgColor="baseColor" titleColor="white"></GridCard>
             <CarouselCustom
                 title="Featured this month!"
                 bodytext="Popular & Exciting Games !"
