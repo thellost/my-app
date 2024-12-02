@@ -1,101 +1,12 @@
 import Heading from "@/components/Sweepstake/Heading";
 import TitleJumbotron from "@/components/Sweepstake/TitleJumbotron";
-import CarouselCustom from "@/components/Carousel/CarouselCustom";
-import { GridCard } from "@/components/Sweepstake/GridCard";
-import {CarouselCardProps} from "@/components/Carousel/CarouselCustom";
+import { GridCard, GridCardProps } from "@/components/Sweepstake/GridCard";
 import {FAQ, questionProps} from "@/components/FAQ";
 import {HalfBanner} from "@/components/Sweepstake/HalfBanner";
 import {FooterCustom} from "@/components/FooterCustom";
 const loremIpsum : string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut a' +
         'tque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
 
-        
-const data_placeholder_carousel_big : CarouselCardProps[] = [
-    {
-        title: "Blackjack",
-        bodytext: loremIpsum,
-        image_url: "[url('../public/blackjack.png')]",
-        playing: "1"
-    }, {
-        title: "Baccarat",
-        bodytext: loremIpsum,
-        image_url: "[url('../public/baccarat.jpg')]",
-        playing: "1"
-    }, {
-        title: "Blackjack",
-        bodytext: loremIpsum,
-        image_url: "[url('../public/blackjack.png')]",
-        playing: "1"
-    }
-];
-
-const data_placeholder_carousel_small : CarouselCardProps[] = [
-    {
-        title: "Gate of Olympus",
-        bodytext: loremIpsum,
-        image_url: "/SlotGo.jpg",
-        playing: "258"
-    }, {
-        title: "Sweet Bonanza",
-        bodytext: loremIpsum,
-        image_url: "/SweetBonanza.jpg",
-        playing: "204"
-    }, {
-        title: "Sugar Rush",
-        bodytext: loremIpsum,
-        image_url: "/SugarRush.jpg",
-        playing: "322"
-    }, {
-        title: "Gate of Olympus",
-        bodytext: loremIpsum,
-        image_url: "/SlotGo.jpg",
-        playing: "258"
-    }, {
-        title: "Sweet Bonanza",
-        bodytext: loremIpsum,
-        image_url: "/SweetBonanza.jpg",
-        playing: "204"
-    }, {
-        title: "Sugar Rush",
-        bodytext: loremIpsum,
-        image_url: "/SugarRush.jpg",
-        playing: "322"
-    }
-];
-
-const data_placeholder_carousel_small_2 : CarouselCardProps[] = [
-    {
-        title: "Poker",
-        bodytext: loremIpsum,
-        image_url: "/Poker.jpg",
-        playing: "571"
-    }, {
-        title: "Baccarat",
-        bodytext: loremIpsum,
-        image_url: "/baccarat.jpg",
-        playing: "190"
-    }, {
-        title: "Roullete",
-        bodytext: loremIpsum,
-        image_url: "/roullete.jpg",
-        playing: "447"
-    }, {
-        title: "Poker",
-        bodytext: loremIpsum,
-        image_url: "/Poker.jpg",
-        playing: "571"
-    }, {
-        title: "Baccarat",
-        bodytext: loremIpsum,
-        image_url: "/baccarat.jpg",
-        playing: "190"
-    }, {
-        title: "Roullete",
-        bodytext: loremIpsum,
-        image_url: "/roullete.jpg",
-        playing: "447"
-    }
-];
 
 const data_placeholder_faq : questionProps[] = [
     {
@@ -115,7 +26,87 @@ const data_placeholder_faq : questionProps[] = [
         answer: "Yes , " + loremIpsum
     }
 ]
+const GridCardCarData : GridCardProps[] = [
+    {
+        title: "Challenger Hellcat",
+        price: "1.75 $",
+        image: "/hellcat.png",
+        days: "12",
+        sold: "45"
+    }, {
+        title: "Aventador SVJ",
+        price: "3.25 $",
+        image: "/aventador-svj.png",
+        days: "3",
+        sold: "23"
+    }, {
+        title: "Challenger Hellcat",
+        price: "1.75 $",
+        image: "/hellcat.png",
+        days: "1",
+        sold: "95"
+    }
+]
 
+const GridCardVacationData : GridCardProps[] = [
+    {
+        title: "9D10N - Vacation in Bahamas",
+        price: "1.75 $",
+        image: "/GrandHyatt-Bahamas.jpg",
+        days: "12",
+        sold: "45"
+    }, {
+        title: "4D3N - Vacation in Bali",
+        price: "3.25 $",
+        image: "/Hotel-potatohead.webp",
+        days: "3",
+        sold: "23"
+    }, {
+        title: "13D12N - Italy",
+        price: "1.75 $",
+        image: "/italy-vacation.jpg",
+        days: "1",
+        sold: "95"
+    },
+    {
+        title: "9D10N - Vacation in Bahamas",
+        price: "1.75 $",
+        image: "/GrandHyatt-Bahamas.jpg",
+        days: "12",
+        sold: "45"
+    }, {
+        title: "4D3N - Vacation in Bali",
+        price: "3.25 $",
+        image: "/Hotel-potatohead.webp",
+        days: "3",
+        sold: "23"
+    }, {
+        title: "13D12N - Italy",
+        price: "1.75 $",
+        image: "/italy-vacation.jpg",
+        days: "1",
+        sold: "95"
+    },
+    {
+        title: "9D10N - Vacation in Bahamas",
+        price: "1.75 $",
+        image: "/GrandHyatt-Bahamas.jpg",
+        days: "12",
+        sold: "45"
+    }, {
+        title: "4D3N - Vacation in Bali",
+        price: "3.25 $",
+        image: "/Hotel-potatohead.webp",
+        days: "3",
+        sold: "23"
+    }, {
+        title: "13D12N - Italy",
+        price: "1.75 $",
+        image: "/italy-vacation.jpg",
+        days: "1",
+        sold: "95"
+    }
+]
 export default async function Home() {
 
 
@@ -127,31 +118,9 @@ export default async function Home() {
                 <Heading title={"SweepstakePlatform"} isAuthenticated={false} email={null} name={null}></Heading>
             </div>
             <TitleJumbotron></TitleJumbotron>
-            <GridCard bgColor="white" titleColor="baseColor"></GridCard>
+            <GridCard bgColor="white" titleColor="baseColor" type="CarCard" data={GridCardCarData}></GridCard>
             <HalfBanner></HalfBanner>
-            <GridCard bgColor="baseColor" titleColor="white"></GridCard>
-            <CarouselCustom
-                title="Featured this month!"
-                bodytext="Popular & Exciting Games !"
-                bgColor="baseColor"
-                data={data_placeholder_carousel_big}
-                type="BigCard"></CarouselCustom>
-            <CarouselCustom
-                title="Slots"
-                bodytext="Popular and High RTP Slots !"
-                bgColor="white"
-                infinite={true}
-                data={data_placeholder_carousel_small}
-                titleColor={"black"}
-                bodytextColor={"black"}
-                type="SmallCard"></CarouselCustom>
-            <CarouselCustom
-                title="Tables Game"
-                bodytext="Classic Games"
-                bgColor="baseColor"
-                data={data_placeholder_carousel_small_2}
-                infinite={true}
-                type="SmallCard"></CarouselCustom>
+            <GridCard bgColor="baseColor" titleColor="white" bodytext="Win Your Dream Getaway!" type="VacationCard" data={GridCardVacationData}></GridCard>
             <FAQ questions={data_placeholder_faq}></FAQ>
             <FooterCustom bgColor="baseColor" titleColor="white"></FooterCustom>
 

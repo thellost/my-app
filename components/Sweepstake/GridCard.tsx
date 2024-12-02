@@ -1,5 +1,6 @@
 import React from "react";
 import {GridCardCar} from "./GridCardCar";
+import {GridCardVacation} from "./GridCardVacation";
 
 type GridProps = {
     title?: string | '',
@@ -8,7 +9,7 @@ type GridProps = {
     titleColor?: string | '',
     bodytextColor?: string | '',
     data?: GridCardProps[] | null,
-    type?: "BigCard" | "SmallCard",
+    type?: "CarCard" | "VacationCard",
     infinite?: boolean
 }
 export type GridCardProps = {
@@ -16,50 +17,69 @@ export type GridCardProps = {
     price?: string | '',
     image: string | '/hellcat.png',
     days?: string | '',
-    sold?: string | '0'
+    sold?: string | '0',
+    bodyText?: string | ''
 }
 
-const GridCardData : GridCardProps[] = [
-    {
-        title: "Challenger Hellcat",
-        price: "1.75 $",
-        image: "/hellcat.png",
-        days: "12",
-        sold: "45"
-    },
-    {
-        title: "Aventador SVJ",
-        price: "3.25 $",
-        image: "/aventador-svj.png",
-        days: "3",
-        sold: "23"
-    },
-    {
-        title: "Challenger Hellcat",
-        price: "1.75 $",
-        image: "/hellcat.png",
-        days: "1",
-        sold: "95"
-    }
-]
+
 export const GridCard = ({
     bodytext = "Try your chance at winnings",
     title = "Featured Offerings",
     bgColor = "baseColor",
-    data = GridCardData,
-    titleColor = "white",
+    data,
+    type = "CarCard",
+    titleColor = "white"
 } : GridProps) => {
 
+    let nums = 0;
     let renderCards;
-    if (data != null) {
+    if (data == null) {
+        
         renderCards = () => {
-            let nums = 0;
-            return data.map(data => {
-                return <GridCardCar key={nums++} title={data.title} price={data.price} image={data.image} days={data.days} sold={data.sold}></GridCardCar>
-            });
-        };
+            return null
+        }
     } else {
-        renderCards = () => {return null};
+        switch (type) {
+            case 'CarCard':
+                renderCards = () => {
+                    return data.map(data => {
+                        return <GridCardCar
+                            key={nums++}
+                            title={data.title}
+                            price={data.price}
+                            image={data.image}
+                            days={data.days}
+                            sold={data.sold}></GridCardCar>
+                    });
+                };
+                break;
+            case 'VacationCard':
+                renderCards = () => {
+                    return data.map(data => {
+                        return <GridCardVacation
+                            key={nums++}
+                            title={data.title}
+                            price={data.price}
+                            image={data.image}
+                            days={data.days}
+                            sold={data.sold}></GridCardVacation>
+                    });
+                };
+                break;
+            default:
+                renderCards = () => {
+                    return data.map(data => {
+                        return <GridCardCar
+                            key={nums++}
+                            title={data.title}
+                            price={data.price}
+                            image={data.image}
+                            days={data.days}
+                            sold={data.sold}></GridCardCar>
+                    });
+                };
+                break;
+        }
     }
 
     return (
@@ -71,7 +91,7 @@ export const GridCard = ({
             </div>
             <h2
                 className={`mb-4 text-2xl text-inter font-bold tracking-tight leading-none text-${titleColor} md:text-3xl lg:text-4xl dark:text-${titleColor}`}>{title}</h2>
-            <div className="grid  grid-cols-2 lg:grid-cols-4 gap-y-2">
+            <div className="grid  grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-5">
                 {renderCards()}
             </div>
         </div>
