@@ -1,10 +1,13 @@
 import {ReactElement} from "react";
+import Image from "next/image";
+
+import BannerImage from '@/public/Beachclub-potatohead.webp';
 export const HalfBanner = () : ReactElement => {
 
     return (
 
         <div className="bg-baseColor h-fit flex">
-            <img className="w-1/2" src="/beachclub-potatohead.webp"></img>
+            <Image className="w-1/2" src={BannerImage} alt="scenery"></Image>
             <section
                 className="w-1/2 px-10 py-5 pt-10 text-white font-Inter content-start">
                 <h2 className="text-4xl font-bold ">
