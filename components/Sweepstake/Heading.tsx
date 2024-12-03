@@ -28,7 +28,7 @@ const Heading = ({
                     <div className="relative flex h-20 items-center justify-between">
                         <div
                             className="flex flex-0 items-center justify-between sm:items-stretch sm:justify-start">
-                            <a href="#">
+                            <a href="/sweepstakes/home/">
                                 <div className="flex flex-shrink-0 items-center basis-1/3">
                                     <Image className="h-8 w-auto" src={logo} alt="Your Company"></Image>
                                     <h1

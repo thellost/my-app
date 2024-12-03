@@ -2,13 +2,56 @@ import Heading from "@/components/Sweepstake/Heading";
 import {FooterCustom} from "@/components/FooterCustom";
 import ImageSlider from "@/components/Sweepstake/ImageSlider";
 import Countdown from "@/components/Sweepstake/Countdown";
+import { GridCard, GridCardProps } from "@/components/Sweepstake/GridCard";
+
+const GridCardVacationData : GridCardProps[] = [
+    {
+        title: "9D10N - Vacation in Bahamas",
+        price: "1.75 $",
+        image: "/GrandHyatt-Bahamas.jpg",
+        days: "12",
+        sold: "45"
+    }, {
+        title: "4D3N - Vacation in Bali",
+        price: "3.25 $",
+        image: "/Hotel-potatohead.webp",
+        days: "3",
+        sold: "23"
+    }, {
+        title: "13D12N - Italy",
+        price: "1.75 $",
+        image: "/italy-vacation.jpg",
+        days: "1",
+        sold: "95"
+    },
+    {
+        title: "9D10N - Vacation in Bahamas",
+        price: "1.75 $",
+        image: "/GrandHyatt-Bahamas.jpg",
+        days: "12",
+        sold: "45"
+    }, {
+        title: "4D3N - Vacation in Bali",
+        price: "3.25 $",
+        image: "/Hotel-potatohead.webp",
+        days: "3",
+        sold: "23"
+    }, {
+        title: "13D12N - Italy",
+        price: "1.75 $",
+        image: "/italy-vacation.jpg",
+        days: "1",
+        sold: "95"
+    }
+]
 export default async function Games({params} : {
     params: Promise < {
         sweepstake_id: string
     } >
 }) {
 
-    const sweepstake_id = (await params).sweepstake_id
+    const sweepstake_id = (await params).sweepstake_id;
+    console.log(sweepstake_id);
     return (
         <div className="bg-baseCardGray ">
 
@@ -16,25 +59,29 @@ export default async function Games({params} : {
                 <Heading title={"Sweepstake"} isAuthenticated={null} email={null} name={null}></Heading>
             </div>
 
-            <div className="relative overflow-hidden bg-baseCardGray lg:overflow-visible text-gray-100 lg:py-5">
+            <div
+                className="relative overflow-hidden bg-baseCardGray lg:overflow-visible text-gray-100 lg:py-5">
                 <div className="px-6 mx-auto max-w-full lg:px-8">
                     <div
                         className="grid grid-cols-1 mx-auto gap-y-5 sm:gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                         <div className="lg:ml-11 lg:pl-4 ">
                             <div className="lg:max-w-lg">
                                 <h2 className="text-base font-semibold leading-7 text-orangeAttention">
-                                4 Day 3 Night
+                                    4 Day 3 Night
                                 </h2>
-                                <p className="mt-2 text-3xl  mb-2 font-bold tracking-tight text-gray-100 sm:text-4xl">
-                                Bali Ultimate Vacation
+                                <p
+                                    className="mt-2 text-3xl  mb-2 font-bold tracking-tight text-gray-100 sm:text-4xl">
+                                    Bali Ultimate Vacation
                                 </p>
                                 <Countdown></Countdown>
-                                
+
                                 <div className="flex items-center">
-                                <div className="py-1 px-4 text-sm rounded-full border  font-bold text-center shadow-xs transition-all duration-500 border-orangeAttention bg-orangeAttention text-black w-fit">Live Draw</div>
-                                <div className="px-2 font-bold">
-                                25th December 2025, 10:00
-                                </div>
+
+                                    <div
+                                        className="py-1 px-4 text-sm rounded-full border  font-bold text-center shadow-xs border-orangeAttention bg-orangeAttention text-black w-fit">Live Draw</div>
+                                    <div className="px-2 font-bold">
+                                        25th December 2025, 10:00
+                                    </div>
                                 </div>
                                 <p className="mt-6 text-lg leading-8 text-gray-400">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit
@@ -122,7 +169,8 @@ export default async function Games({params} : {
                                             </svg >Meals and tour guide Included.
                                         </dt>
                                         <dd className="inline">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde magnam sapiente sequi voluptas aperiam
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde magnam sapiente
+                                            sequi voluptas aperiam
                                         </dd>
                                     </div>
                                 </dl>
@@ -208,10 +256,18 @@ export default async function Games({params} : {
                                             </svg >Meals and tour guide Included.
                                         </dt>
                                         <dd className="inline">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde magnam sapiente sequi voluptas aperiam
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde magnam sapiente
+                                            sequi voluptas aperiam
                                         </dd>
                                     </div>
+
                                 </dl>
+                                <div className="grid grid-cols-1 gap-y-4 py-5">
+                                   <div className="font-Inter font-bold text-4xl ">1.20 $</div>
+                                    <button
+                                        type='button'
+                                        className='py-2.5 px-6 text-sm rounded-lg bg-transparent border border-white text-white cursor-pointer font-bold text-center shadow-xs  transition-all duration-500 hover:border-orangeAttention hover:bg-orangeAttention hover:text-black'>Enter Now</button>
+                                </div>
                             </div>
                         </div>
                         <div
@@ -224,17 +280,8 @@ export default async function Games({params} : {
                 </div>
             </div>
 
-
-            <div className="sticky top-20 w-1/2 bg-baseCardGray"></div>
-            <div className="grid grid-cols-1 item bg-baseColor  h-screen">
-                <div className="col-start-1 text-gray-200 py-10 flex flex-row font-Inter gap-3">
-                    <h1
-                        className="font-extrabold font-Inter leading-none text-white text-xl md:text-2xl lg:text-4xl">4 Day 3 Night - Bali</h1>
-                </div>
-            </div>
-            <div className=" bg-baseBackIcon grid place-items-center h-screen sticky ">
-                {sweepstake_id}
-            </div>
+            <GridCard bgColor="baseColor" title="Related Offerings" titleColor="white" bodytext="Win Your Dream Getaway!" type="VacationCard" data={GridCardVacationData}></GridCard>
+          
 
             <FooterCustom bgColor="baseColor" titleColor="white"></FooterCustom>
 
