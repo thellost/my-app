@@ -39,7 +39,7 @@ const Heading = ({
                         </div>
 
                         <ul className="flex basis-1/2 justify-center items-start">
-                            <li className="flex flex-1 justify-center">
+                            <li className="lg:flex lg:visible hidden overflow-hidden flex-1 justify-center">
                                 <button
                                     onMouseEnter={() => setMenuOpen(true)}
                                     onMouseLeave={() => setMenuOpen(false)}
@@ -94,10 +94,10 @@ const Heading = ({
 
                             </li>
 
-                            <li className="flex flex-1 text-white rounded font-Inter justify-center">
+                            <li className="lg:flex flex-1 text-white rounded font-Inter justify-center hidden lg:visible">
                                 Features
                             </li>
-                            <li className="flex flex-1 justify-center">
+                            <li className="lg:flex lg:visible hidden overflow-hidden flex-1 justify-center">
                                 <button
                                     onMouseEnter={() => setMenuOpen(true)}
                                     onMouseLeave={() => setMenuOpen(false)}
@@ -152,7 +152,7 @@ const Heading = ({
 
                             </li>
 
-                            <li className="flex flex-1  text-white rounded font-Inter justify-center">
+                            <li className="lg:flex flex-1 text-white rounded font-Inter justify-center hidden lg:visible">
                                 Contacts
                             </li>
 
@@ -160,7 +160,7 @@ const Heading = ({
                         <div className="flex flex-shrink-0 items-center ">
                             <div
                                 className="rounded-md px-3 py-2 text-sm font-bold text-baseFontColor hover:underline"
-                                aria-current="page">Sign In2</div>
+                                aria-current="page">Sign In</div>
 
                         </div>
                     </div>

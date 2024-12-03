@@ -58,7 +58,7 @@ export const GridCardVacation = ({
                   </a>
                 </span>
                 <div
-                    className=" bg-gray-200 rounded-full py-1 text-center text-sm font-semibold text-gray-700 mr-2 mb-2">#Hot</div>
+                    className=" bg-gray-200 invisible lg:visible rounded-full py-1 text-center text-sm font-semibold text-gray-700 mr-2 mb-2">#Hot</div>
                 <span className="text-gray-200 w-full flex-1 font-Inter text-center font-extrabold text-xl mr-2 mb-2"> {price}</span>
             </div>
         </div>

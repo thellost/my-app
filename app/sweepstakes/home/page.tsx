@@ -3,7 +3,7 @@ import TitleJumbotron from "@/components/Sweepstake/TitleJumbotron";
 import { GridCard, GridCardProps } from "@/components/Sweepstake/GridCard";
 import {FAQ, questionProps} from "@/components/FAQ";
 import {HalfBanner} from "@/components/Sweepstake/HalfBanner";
-import {FooterCustom} from "@/components/FooterCustom";
+import {FooterCustom} from "@/components/Sweepstake/FooterCustom";
 const loremIpsum : string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut a' +
         'tque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
 
@@ -11,18 +11,18 @@ const loremIpsum : string = 'Lorem ipsum dolor sit amet consectetur adipisicing 
 const data_placeholder_faq : questionProps[] = [
     {
         question: "Who are we ?",
-        answer: "We are leading an innovative casino, " + loremIpsum
+        answer: "We are a sweepstake platform, " + loremIpsum
     }, {
         question: "Are we licensed?",
         answer: "Yes we are licensed..., " + loremIpsum
     }, {
-        question: "What type of casino game I can play?",
-        answer: "Slots Baccarat Blackjack, " + loremIpsum
+        question: "What type of prize that i can win?",
+        answer: "Vacation and Cars, " + loremIpsum
     }, {
-        question: "How do i withdraw?",
+        question: "How do i join?",
         answer: "Using our website..., " + loremIpsum
     }, {
-        question: "Is Mzecna Onlince Casino Safe?",
+        question: "Is this real?",
         answer: "Yes , " + loremIpsum
     }
 ]
