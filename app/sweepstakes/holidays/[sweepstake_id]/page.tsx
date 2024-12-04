@@ -3,7 +3,6 @@ import {FooterCustom} from "@/components/FooterCustom";
 import ImageSlider from "@/components/Sweepstake/ImageSlider";
 import Countdown from "@/components/Sweepstake/Countdown";
 import { GridCard, GridCardProps } from "@/components/Sweepstake/GridCard";
-
 const GridCardVacationData : GridCardProps[] = [
     {
         title: "9D10N - Vacation in Bahamas",
@@ -44,6 +43,8 @@ const GridCardVacationData : GridCardProps[] = [
         sold: "95"
     }
 ]
+
+const image_list_bali = ["/holidays/partyDJ-potatohead.webp", "/holidays/party-potatohead.webp", "/holidays/Viceroy-Bali-Main-Pool-bale.webp", "/holidays/Wellness-Retreat-Bali-2.jpg", "/holidays/Wellness-Retreat-Bali-6-scaled.jpg","/holidays/partyDJ-potatohead.webp", "/holidays/party-potatohead.webp", "/holidays/Viceroy-Bali-Main-Pool-bale.webp", "/holidays/Wellness-Retreat-Bali-2.jpg", "/holidays/Wellness-Retreat-Bali-6-scaled.jpg"]
 export default async function Games({params} : {
     params: Promise < {
         sweepstake_id: string
@@ -273,7 +274,7 @@ export default async function Games({params} : {
                         <div
                             className="flex items-start justify-end lg:order-first lg:sticky lg:top-24 lg:self-start">
                             <div className="text-white w-full ">
-                                <ImageSlider bgColor="indigo-600"></ImageSlider>
+                                <ImageSlider imgList={image_list_bali} bgColor="indigo-600"></ImageSlider>
                             </div>
                         </div>
                     </div>

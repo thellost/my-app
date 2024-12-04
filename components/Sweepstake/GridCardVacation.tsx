@@ -51,7 +51,7 @@ export const GridCardVacation = ({
             </div>
             <div className="px-6 pt-4 pb-2 grid grid-cols-3 items-center">
                 <span className="inline-block mr-2 mb-2">
-                  <a href={"/holidays/"+title}>
+                  <a href={"/sweepstakes/holidays/"+title}>
                     <button
                         type='button'
                         className='py-2.5 px-6 text-sm rounded-lg bg-transparent border border-white text-white cursor-pointer font-bold text-center shadow-xs transition-all duration-500 hover:border-orangeAttention hover:bg-orangeAttention hover:text-black'>Entry</button>
