@@ -91,7 +91,7 @@ export const GridCard = ({
             </div>
             <h2
                 className={`mb-4 text-2xl text-inter font-bold tracking-tight leading-none text-${titleColor} md:text-3xl lg:text-4xl dark:text-${titleColor}`}>{title}</h2>
-            <div className="grid  grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-5">
+            <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-5">
                 {renderCards()}
             </div>
         </div>
