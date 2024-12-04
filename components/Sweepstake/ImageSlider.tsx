@@ -54,10 +54,9 @@ const ImageSlider = ({
         setImage] = useState < string > (imgList[0]);
 
     const CustomLeftArrow = ({onClick, carouselState} : ArrowProps) => {
-        var current_slide = carouselState
-            ?.currentSlide;
-        if (current_slide != null) {
-            setImage(imgList[current_slide])
+        if (carouselState?.currentSlide != null) {
+            setImage(imgList[carouselState?.currentSlide
+                ])
         }
         if (onClick == null) {
             return null
