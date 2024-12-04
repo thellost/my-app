@@ -68,6 +68,22 @@ const ImageSlider = ({
         }}></button>
     }
 
+    const CustomRightArrow = ({onClick, carouselState} : ArrowProps) => {
+      if (carouselState?.currentSlide != null) {
+          setImage(imgList[carouselState?.currentSlide
+              ])
+      }
+      if (onClick == null) {
+          return null
+      }
+      return <button
+          className='react-multiple-carousel__arrow react-multiple-carousel__arrow--right'
+          onClick={() => {
+          onClick();
+      }}></button>
+  }
+
+
     const renderCards = () => {
         return imgList.map(img_string => {
             return <Image
@@ -90,7 +106,8 @@ const ImageSlider = ({
                 width={1000}
                 height={1000}></Image>
             <Carousel className='w-full' swipeable={true} draggable={true} arrows={true} responsive={responsive} ssr={false} // means to render carousel on server-side.
-                infinite={infinite} autoPlaySpeed={1000} keyBoardControl={true} transitionDuration={500} partialVisbile={true} customLeftArrow={< CustomLeftArrow />}>
+                infinite={infinite} autoPlaySpeed={1000} keyBoardControl={true} transitionDuration={500} partialVisbile={true}
+                customRightArrow={<CustomRightArrow/>} customLeftArrow={< CustomLeftArrow />}>
                 {renderCards()}
             </Carousel>
 
