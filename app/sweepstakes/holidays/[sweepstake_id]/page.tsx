@@ -57,7 +57,7 @@ export default async function Games({params} : {
         <div className="bg-baseCardGray ">
 
             <div className="sticky overflow-visible top-0 z-50">
-                <Heading title={"Sweepstake"} isAuthenticated={null} email={null} name={null}></Heading>
+                <Heading title={"SweepstakePlatform"} isAuthenticated={null} email={null} name={null}></Heading>
             </div>
 
             <div
