@@ -6,8 +6,8 @@ import {HalfBanner} from "@/components/Sweepstake/HalfBanner";
 import {FooterCustom} from "@/components/Sweepstake/FooterCustom";
 const loremIpsum : string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut a' +
         'tque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
-
-
+import {cookies} from "next/headers";
+import firebase_app from "@/firebase/config";
 const data_placeholder_faq : questionProps[] = [
     {
         question: "Who are we ?",
@@ -109,13 +109,12 @@ const GridCardVacationData : GridCardProps[] = [
 ]
 export default async function Home() {
 
-
-   
-
+    const UID = (await cookies()).get("UID")
+    console.log(UID)
     return (
         <div>
             <div className="sticky top-0 z-50">
-                <Heading title={"SweepstakePlatform"} isAuthenticated={false} email={null} name={null}></Heading>
+                <Heading title={"SweepstakePlatform"} isAuthenticated={true} email={null} name={null}></Heading>
             </div>
             <TitleJumbotron></TitleJumbotron>
             <GridCard bgColor="white" titleColor="baseColor" type="CarCard" data={GridCardCarData}></GridCard>

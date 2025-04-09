@@ -3,6 +3,7 @@ import {FooterCustom} from "@/components/FooterCustom";
 import ImageSlider from "@/components/Sweepstake/ImageSlider";
 import Countdown from "@/components/Sweepstake/Countdown";
 import { GridCard, GridCardProps } from "@/components/Sweepstake/GridCard";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 const GridCardVacationData : GridCardProps[] = [
     {
         title: "9D10N - Vacation in Bahamas",
@@ -50,14 +51,14 @@ export default async function Games({params} : {
         sweepstake_id: string
     } >
 }) {
-
+    
     const sweepstake_id = (await params).sweepstake_id;
-    console.log(sweepstake_id);
+    console.log(sweepstake_id)
     return (
         <div className="bg-baseCardGray ">
 
             <div className="sticky overflow-visible top-0 z-50">
-                <Heading title={"SweepstakePlatform"} isAuthenticated={null} email={null} name={null}></Heading>
+                <Heading title={"SweepstakePlatform"} isAuthenticated={true} email={null} name={null}></Heading>
             </div>
 
             <div
@@ -275,7 +276,7 @@ export default async function Games({params} : {
                         <div
                             className="flex items-start justify-end lg:order-first lg:sticky lg:top-24 lg:self-start">
                             <div className="text-white w-full ">
-                                <ImageSlider imgList={image_list_bali} bgColor="indigo-600"></ImageSlider>
+                                <ImageSlider imgList={image_list_bali} bgColor=""></ImageSlider>
                             </div>
                         </div>
                     </div>

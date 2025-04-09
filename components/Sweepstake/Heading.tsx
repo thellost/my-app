@@ -9,10 +9,15 @@ type HeadingProps = {
 import Image from "next/image";
 import logo from '@/public/figma-svgrepo-com-Orange.svg';
 import React, {useState} from "react";
-const Heading = ({
-    title
-} : HeadingProps) : ReactElement => {
 
+import {LoginLink, RegisterLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+const Heading = ({
+    title,
+    isAuthenticated=false
+} : HeadingProps) : ReactElement => {
+    
+    const [ProfileOpen,
+        setProfileOpen] = useState < boolean > (false);
     const [MenuOpen,
         setMenuOpen] = useState < boolean > (false);
 
@@ -157,11 +162,99 @@ const Heading = ({
                             </li>
 
                         </ul>
-                        <div className="flex flex-shrink-0 items-center ">
-                            <div
-                                className="rounded-md px-3 py-2 text-sm font-bold text-baseFontColor hover:underline"
-                                aria-current="page">Sign In</div>
 
+                        <div className="flex flex-shrink-0 items-center ">
+
+                            {isAuthenticated
+                                ? null
+                                : <LoginLink>
+                                    <div
+                                        className="rounded-md px-3 py-2 text-sm font-bold text-baseFontColor hover:underline"
+                                        aria-current="page">Sign In</div>
+                                </LoginLink>
+}
+
+                            {isAuthenticated
+                                ? null
+                                : <RegisterLink>
+                                    <div
+                                        className="rounded-md bg-orangeAttention px-6 py-2 text-sm font-bold drop-shadow-xl text-baseFontColor  hover:bg-white hover:text-orangeAttention">Register</div>
+                                </RegisterLink>
+}
+
+                            {isAuthenticated
+
+                                ? <div className="flex justify-center">
+                                        <div className="relative inline-block">
+                                            <button
+                                                onClick={() => setProfileOpen(!ProfileOpen)}
+                                                className="relative z-10 flex items-center p-2 text-sm text-gray-200 bg-baseCardGray border border-transparent rounded-md focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:text-white dark:bg-gray-800 focus:outline-none">
+                                                <span className="mx-1">John Doe</span>
+                                                <svg
+                                                    className="w-5 h-5 mx-1"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                            </button>
+
+                                            <div
+                                                className={`absolute right-0 z-20 w-56 py-2 mt-2 transation-all duration-500 ease-in-out overflow-hidden bg-baseCardGray rounded-md shadow-xl dark:bg-gray-800 ${ProfileOpen
+                                                ? "grid-rows-[1fr] opacity-100 max-h-screen"
+                                                : "grid-rows-[0fr] opacity-0 max-h-0"}`}>
+                                                <a
+                                                    href="#"
+                                                    className="flex items-center p-3 -mt-2 text-sm text-gray-600 transition-colors duration-200 transform">
+                                                    <img
+                                                        className="flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9"
+                                                        src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d29tYW4lMjBibHVlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=face&w=500&q=200"
+                                                        alt="jane avatar"></img>
+                                                    <div className="mx-1">
+                                                        <h1 className="text-sm font-semibold text-gray-700 dark:text-gray-200">John Doe</h1>
+                                                        <p className="text-sm text-gray-500 dark:text-gray-400">john10@gmail.com</p>
+                                                    </div>
+                                                </a>
+
+                                                <a href="#" className={profileTextClass}>
+                                                    view profile
+                                                </a>
+
+                                                <a href="#" className={profileTextClass}>
+                                                    Settings
+                                                </a>
+
+                                                <a href="#" className={profileTextClass}>
+                                                    Keyboard shortcuts
+                                                </a>
+
+                                                <a href="#" className={profileTextClass}>
+                                                    Company profile
+                                                </a>
+
+                                                <a href="#" className={profileTextClass}>
+                                                    Team
+                                                </a>
+
+                                                <a href="#" className={profileTextClass}>
+                                                    Invite colleagues
+                                                </a>
+
+                                                <a href="#" className={profileTextClass}>
+                                                    Help
+                                                </a>
+                                                <LogoutLink>
+                                                    <a className={profileTextClass}>
+                                                        Sign Out
+                                                    </a>
+                                                </LogoutLink>
+                                            </div>
+                                        </div>
+                                    </div>
+                                : null
+}
                         </div>
                     </div>
                 </div>

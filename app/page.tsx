@@ -10,10 +10,12 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { customerTable } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { db } from "@/db";
+import { cookies } from "next/headers";
+import { isAbsolute } from "path";
 const loremIpsum : string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore in quis aut a' +
         'tque, sequi consequatur sed odio. Ex atque vitae praesentium culpa';
 
-        
+
 const data_placeholder_carousel_big : CarouselCardProps[] = [
     {
         title: "Blackjack",
@@ -121,28 +123,21 @@ const data_placeholder_faq : questionProps[] = [
 ]
 
 export default async function Home() {
-
-    const {getAccessToken} = getKindeServerSession();
-    const {isAuthenticated} = getKindeServerSession();
-    const accessToken = await getAccessToken();
-    let email = null,firstname=null;
-    if (await isAuthenticated()){
-      console.log(accessToken);
-      const db_response = await db.select({
-        email: customerTable.email,
-        firstname: customerTable.firstname
-      }).from(customerTable).where(eq(customerTable.email, 'aldy10ball@gmail.com'));
-      email = db_response[0].email;
-      firstname = db_response[0].firstname;
-      
+    let isAuthenticated = false;
+    if ((await cookies()).get("UID")?.value == null){
+        isAuthenticated = false;
+    } else {
+        isAuthenticated  = true;
     }
+    
+    
    
 
     return (
         <div>
             <div className="sticky top-0 z-50">
                 <LiveHeading></LiveHeading>
-                <Heading title={"Mzeca Casino."} isAuthenticated={await isAuthenticated()} email={email} name={firstname} displayMoney={false}></Heading>
+                <Heading title={"Mzeca Casino."} isAuthenticated={isAuthenticated} email={"johnDoe@gmail.com"} name={"John"} displayMoney={false}></Heading>
             </div>
 
             <Banner></Banner>
